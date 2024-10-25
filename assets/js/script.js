@@ -33,4 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
         let hardPage = document.getElementById('hard-page');
         hardPage.style.display = 'block';
     }
+    
+    function back(){
+        let easyPage = document.getElementById('easy-page');
+        let mediumPage = document.getElementById('medium-page');
+        let hardPage = document.getElementById('hard-page')        
+        let landingPage = document.getElementById('landing-page');
+
+        if (easyPage.style.display === 'block'){
+            easyPage.style.display = 'none';
+            landingPage.style.display = 'block';
+        }
+        if (mediumPage.style.display === 'block'){
+            mediumPage.style.display = 'none';
+            landingPage.style.display = 'block';  
+        }
+        if (hardPage.style.display === 'block'){
+            hardPage.style.display = 'none';
+            landingPage.style.display = 'block';   
+        }
+        
+    }
+    
 });
