@@ -72,3 +72,18 @@ h2{
     width: 140px;
     font-size: 28px;
 }
+
+/* add animations to the buttons for better interactivity */
+.btn-big:hover{
+    transition-duration: 800ms;
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
