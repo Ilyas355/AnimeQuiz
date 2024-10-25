@@ -148,3 +148,12 @@ h2{
     font-family: 'Kanit';
 }
 
+/* add animations to the buttons for better interactivity */
+.startQuizBtn:hover{
+    transition-duration: 1000ms;
+    transform: scale(1.1);
+}
+.back:hover{
+    transition-duration: 1000ms;
+    transform: scale(1.1);
+}
