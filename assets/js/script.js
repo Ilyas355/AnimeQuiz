@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     let easyPageButton = document.getElementById('easy');
     easyPageButton.addEventListener('click', displayEasyPage);
@@ -54,5 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
     }
-    
+
+
 });
