@@ -358,5 +358,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+    function resetTimer() {
+        secondsLeft = 10; 
+        updateTimer();
+    }
 
 });
