@@ -50,12 +50,19 @@ h2{
 }
 
 .landing-page-title {
+    background-color: #4F4F4F;
+    padding: 7px;
+    border: 3px solid #F5F5F5;
+    border-radius: 8px;
+    width: 40%;
+    height: 40%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     color: #F5F5F5;
-    margin-top: 100px;
+    margin-top: 8%;
     font-family: 'Kanit';
+    max-width: 90%;
 }
 
 /* style buttons on landing page */
