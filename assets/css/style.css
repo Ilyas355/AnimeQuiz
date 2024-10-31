@@ -4,7 +4,7 @@ html{
     padding-top: 0;
     background-color: #dbd6d6;
 }
- 
+
 body{
     height: 100%;
     margin: 0;
@@ -31,7 +31,7 @@ h1:hover{
 /* page content styles */
 /* structure the title */
 h2{
-    margin-top: 70px;
+    margin-top: 7%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -46,6 +46,7 @@ h2{
     border-radius: 8px;
     color: #F5F5F5;
     font-family: 'Kanit';
+    max-width: 90%;
 }
 
 .landing-page-title {
