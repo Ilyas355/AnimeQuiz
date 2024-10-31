@@ -168,3 +168,84 @@ h2{
     transition-duration: 1000ms;
     transform: scale(1.1);
 }
+
+
+/* game container */
+
+.quiz-container{
+    height: 60%;
+    width: 40%;
+    font-family: 'Kanit';
+    background-color: #F9F9F9; /* Softer background color */
+    border: 7px solid #4F4F4F;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+
+.imageContainer{
+    max-height: 300px;
+    width: 400px;
+}
+#quizImage{
+    /* min-width: 50px; */
+    max-height: 180px;
+    max-width: 90%;
+    border: 5px solid #4F4F4F;
+    border-radius: 5px;
+}
+
+.image-Question{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+#question-picture{
+    width: 50%;
+    height: 50%;
+    padding: 20px; /* Increased padding for better spacing */
+    color: #4F4F4F; /* Keep the color */
+    font-size: 100%; /* Slightly larger font size */
+    font-weight: 700; /* Slightly lighter weight */
+    background-color: #E8E8E8; /* Softer background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align the text */
+}
+
+.options{
+    background-color: #5A5A5A;
+    height: auto;
+    width: 70%;
+    border: 4px solid #4F4F4F;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 1rem 3rem 1rem 1rem;
+    padding: 1.5rem 2rem; /* Adjusted padding for better spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    /* text-align: center; */
+}
+
+.selection {
+    height: 15px;
+    width: 3px;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: rgb(203, 203, 203);
+    border-color: #ffffff;
+    border: 2px solid #F5F5F5;
+}
+
+.list{
+    list-style-type: none;
+}
