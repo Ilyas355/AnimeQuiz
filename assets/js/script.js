@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    // quiz lists
     let easyQuiz=[{ name: 'Aizen', img: 'assets/images/EasyQuiz/Aizen.webp', hint: 'This character is from Bleach'},
         {name: 'Edward Elric', img: 'assets/images/EasyQuiz/Edward_Elric.webp', hint: 'This character is from FullMetal Alchemist'},
         {name: 'Eren Yeager', img: 'assets/images/EasyQuiz/Eren_Yeager.webp', hint: 'This character is from AttackOnTitan'},
@@ -116,6 +117,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+    // Global Variables
+    let PreviousCharacters = []; // The correct answers in the previous rounds 
+    let currentAnswer = []; // The current correct answer
+    let intervalId ; // Holds the function to update the create a 10 second timer every round
+    let timerId; // Holds the function to update the timer displayed on the screen every second
+    let secondsLeft = 10; // Counter for seconds left of a round
+    let roundsCompleted = 1; // Counter for rounds completed
+    let maxRounds = 5; // Maximum number of rounds
+    let currentQuiz ; // Difficulty level of the quiz - easy, medium or hard 
+    let totalPoints = 0; // Number of points the user accumalates
+
+
+
+
+    // display the pages
     function displayEasyPage(){
         
         let landingPage = document.getElementById('landing-page');
@@ -137,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hardPage.style.display = 'block';
     }
     
+    // back button
     function back(){
         let easyPage = document.getElementById('easy-page');
         let mediumPage = document.getElementById('medium-page');
@@ -158,5 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
+
+    
 
 });
