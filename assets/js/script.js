@@ -245,8 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-
-
     // run the quiz
     function runQuiz(){
 
@@ -276,6 +274,31 @@ document.addEventListener('DOMContentLoaded', function() {
         hint.innerText = MediumQuiz[Answer].hint;
 
         
+    }
+
+
+    // calcualte correct answer
+    function correctAnswer(){
+        let correctIndex ;
+        do {
+            correctIndex = Math.floor(Math.random() * MediumQuiz.length);
+        } while (PreviousCharacters.includes(correctIndex));
+        PreviousCharacters.push(correctIndex)
+        return correctIndex
+    }
+
+
+    // display false options
+    function falseOptions(){
+        let option ;
+        let falseOptionslist = [];
+        do {
+            option = Math.floor(Math.random() * MediumQuiz.length);
+            if (currentAnswer.includes(option)!=true && falseOptionslist.includes(option)!=true){
+                falseOptionslist.push(option);
+            }
+        } while (falseOptionslist.length<3);
+        return falseOptionslist;
     }
 
 
