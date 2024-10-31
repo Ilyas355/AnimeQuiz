@@ -260,3 +260,24 @@ h2{
 .list{
     list-style-type: none;
 }
+
+.hint{
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-family: 'Kanit';
+}
+
+.hint-container{
+    background-color: #4F4F4F;
+    padding: 7px;
+    border: 3px solid #F5F5F5;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #F5F5F5;
+    font-family: 'Kanit';
+    font-size: 70%;
+}
