@@ -363,4 +363,23 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTimer();
     }
 
+    function displayFinalPage(){
+        let quizPage = document.getElementById('Quiz');
+        quizPage.style.display = 'none';
+        let FinalPage = document.getElementById('final-page');
+        FinalPage.style.display = 'block';
+
+        let score = document.getElementById('amount');
+        score.innerText = `You scored ${totalPoints} points on this quiz`
+        let message = document.getElementById('message');   
+        if (totalPoints> 60){
+            message.innerText = `You can now call yourself the Anime Master`;            
+        } else if(totalPoints > 30){
+            message.innerText = `You can now call yourself an Anime expert`;               
+        } else if (totalPoints <= 30){
+            message.innerText = 'You can now call yourself an Anime newbie';
+        }
+
+    }    
+
 });
