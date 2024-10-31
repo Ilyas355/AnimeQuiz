@@ -87,6 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
         {name: 'Zabuza', img: 'assets/images/MediumQuiz/Zabuza.webp'},
     ]
 
+    let hardQuiz = [{ name: 'Aizawa', img: 'assets/images/HardQuiz/Aizawa.webp'},
+        {name: 'Annie', img: 'assets/images/HardQuiz/Annie.webp'},
+        {name: 'Dazai', img: 'assets/images/HardQuiz/Dazai.webp'},
+        {name: 'genos', img: 'assets/images/HardQuiz/genos.webp'},
+        {name: 'Gintoki', img: 'assets/images/HardQuiz/Gintoki.webp'},
+        {name: 'Grimmjow', img: 'assets/images/HardQuiz/Grimmjow.webp'},
+        {name: 'Guts', img: 'assets/images/HardQuiz/Guts.webp'},
+        {name: 'Haku', img: 'assets/images/HardQuiz/Haku.webp'},
+        {name: 'Harlequin', img: 'assets/images/HardQuiz/Harlequin.webp'},
+        {name: 'Histugaya', img: 'assets/images/HardQuiz/Histugaya.webp'},
+        {name: 'Kenpachi Zaraki', img: 'assets/images/HardQuiz/Kenpachi_Zaraki.webp'},
+        {name: 'Kirishima', img: 'assets/images/HardQuiz/Kirishima.webp'},
+        {name: 'Kisuke Urahara', img: 'assets/images/HardQuiz/Kisuke_Urahara.webp'},
+        {name: 'Leonie', img: 'assets/images/HardQuiz/Leorie.webp'},
+        {name: 'Mina Ashido', img: 'assets/images/HardQuiz/Mina_Ashido.webp'},
+        {name: 'Ryuk', img: 'assets/images/HardQuiz/Ryuk.webp'},
+        {name: 'Sai', img: 'assets/images/HardQuiz/Sai.webp'},
+        {name: 'Sasori', img: 'assets/images/HardQuiz/Sasori.webp'},
+        {name: 'Scar', img: 'assets/images/HardQuiz/Scar.webp'},
+        {name: 'Shisui', img: 'assets/images/HardQuiz/Shisui.webp'},
+        {name: 'Spike', img: 'assets/images/HardQuiz/Spike.webp'},
+        {name: 'Ulquiorra', img: 'assets/images/HardQuiz/Ulquiorra.webp'},
+        {name: 'Uraraka', img: 'assets/images/HardQuiz/Uraraka.webp'},
+        {name: 'Ymir', img: 'assets/images/HardQuiz/Ymir.webp'},
+        {name: 'Zoe Hange', img: 'assets/images/HardQuiz/Zoe_Hange.webp'},
+    ]
+
+
     let PreviousCharacters = []; // The correct answers in the previous rounds 
     let currentAnswer = []; // The current correct answer
 
@@ -104,12 +132,16 @@ document.addEventListener('DOMContentLoaded', function() {
         landingPage.style.display = 'none';
         let easyPage = document.getElementById('easy-page');
         easyPage.style.display = 'block';
+        currentQuiz = easyQuiz;
+        console.log(currentQuiz.length);
     }
     function displayMediumPage(){
         let landingPage = document.getElementById('landing-page');
         landingPage.style.display = 'none';
         let MediumPage = document.getElementById('medium-page');
-        MediumPage.style.display = 'block';        
+        MediumPage.style.display = 'block';
+        currentQuiz = MediumQuiz;
+        console.log(MediumQuiz.length);        
 
     }
     function displayHardPage(){
@@ -117,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
         landingPage.style.display = 'none';
         let hardPage = document.getElementById('hard-page');
         hardPage.style.display = 'block';
+        currentQuiz = hardQuiz;
+        console.log(currentQuiz);
     }
     
     function back(){
@@ -145,18 +179,26 @@ document.addEventListener('DOMContentLoaded', function() {
         let easyPage = document.getElementById('easy-page');
         let MediumPage = document.getElementById('medium-page');
         let hardPage = document.getElementById('hard-page');
+        let gameTitle = document.getElementById('game-title');
+        let hint = document.getElementById('hint');
 
         if (easyPage.style.display = 'block'){
             easyPage.style.display = 'none';
             Quiz.style.display = 'block';
+            gameTitle.innerText = 'Easy Mode'
+
         }
         if (MediumPage.style.display === 'block'){
             MediumPage.style.display = 'none';
             Quiz.style.display = 'block';
+            gameTitle.innerText = 'Medium Mode'
+            hint.style.display = 'none';
         } 
         if (hardPage.style.display === 'block'){
             hardPage.style.display = 'none';
             Quiz.style.display = 'block';
+            gameTitle.innerText = 'Hard Mode';
+            hint.style.display = 'none';
         }
 
 
@@ -233,13 +275,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         let img = document.getElementById('quizImage');
-        img.src = MediumQuiz[Answer].img;
+        img.src = currentQuiz[Answer].img;
 
         let options = document.getElementById('option-values').getElementsByTagName('li');
-        options[0].innerHTML = `<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[0]].name}</span>`
-        options[1].innerHTML = `<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[1]].name}</span>`
-        options[2].innerHTML =`<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[2]].name}</span>`
-        options[3].innerHTML =`<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[3]].name}</span>`
+        options[0].innerHTML = `<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[0]].name}</span>`
+        options[1].innerHTML = `<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[1]].name}</span>`
+        options[2].innerHTML =`<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[2]].name}</span>`
+        options[3].innerHTML =`<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[3]].name}</span>`
 
         let optionButtons = document.getElementsByClassName('selection');
         for (let i = 0; i < optionButtons.length; i++) {
@@ -247,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         let hint = document.getElementById('hint-container')
-        hint.innerText = MediumQuiz[Answer].hint;
+        hint.innerText = currentQuiz[Answer].hint;
 
         
     }
@@ -256,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function correctAnswer(){
         let correctIndex ;
         do {
-            correctIndex = Math.floor(Math.random() * MediumQuiz.length);
+            correctIndex = Math.floor(Math.random() * currentQuiz.length);
         } while (PreviousCharacters.includes(correctIndex));
         PreviousCharacters.push(correctIndex)
         return correctIndex
@@ -268,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let option ;
         let falseOptionslist = [];
         do {
-            option = Math.floor(Math.random() * MediumQuiz.length);
+            option = Math.floor(Math.random() * currentQuiz.length);
             if (currentAnswer.includes(option)!=true && falseOptionslist.includes(option)!=true){
                 falseOptionslist.push(option);
             }
@@ -303,8 +345,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentTime = parseInt(document.getElementById('timer').innerText, 10);
         console.log(currentTime)
         console.log(inputtedAnswer)
-        console.log(MediumQuiz[currentAnswer[0]].name)
-        if (inputtedAnswer==MediumQuiz[currentAnswer[0]].name){
+        console.log(currentQuiz[currentAnswer[0]].name)
+        if (inputtedAnswer==currentQuiz[currentAnswer[0]].name){
             if (currentTime >= 10) {
                 console.log("current-time " + currentTime)
                 totalPoints += 5;
