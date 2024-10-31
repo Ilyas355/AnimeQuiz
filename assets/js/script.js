@@ -237,6 +237,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    // update the timer
+    function updateTimer(){
+        let Quiz = document.getElementById('Quiz');
+        Quiz.classList.remove('blur');
+        document.getElementById('timer').innerText = secondsLeft;
+    }
+
+
+
+
+    // run the quiz
+    function runQuiz(){
+
+
+        let Answer = correctAnswer();
+        currentAnswer[0] = Answer;
+        let optionsList = falseOptions();
+        optionsList.push(Answer);
+        optionsList = shuffleArray(optionsList);
+
+
+        let img = document.getElementById('quizImage');
+        img.src = MediumQuiz[Answer].img;
+
+        let options = document.getElementById('option-values').getElementsByTagName('li');
+        options[0].innerHTML = `<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[0]].name}</span>`
+        options[1].innerHTML = `<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[1]].name}</span>`
+        options[2].innerHTML =`<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[2]].name}</span>`
+        options[3].innerHTML =`<button class="selection"></button><span class="option-text"> ${MediumQuiz[optionsList[3]].name}</span>`
+
+        let optionButtons = document.getElementsByClassName('selection');
+        for (let i = 0; i < optionButtons.length; i++) {
+            optionButtons[i].addEventListener('click', chooseOption);
+        }
+
+        let hint = document.getElementById('hint-container')
+        hint.innerText = MediumQuiz[Answer].hint;
+
+        
+    }
 
 
 
