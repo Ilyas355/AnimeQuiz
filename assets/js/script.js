@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             clearInterval(intervalId); // Stop the interval after 5 rounds
             clearInterval(timerId)
+            displayFinalPage();
         }
         
     }
