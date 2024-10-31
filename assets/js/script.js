@@ -1,8 +1,6 @@
 
+
 document.addEventListener('DOMContentLoaded', function() {
-
-    // event listners
-
     let easyPageButton = document.getElementById('easy');
     easyPageButton.addEventListener('click', displayEasyPage);
 
@@ -15,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let hint = document.getElementById('hint');
     hint.addEventListener('click', showHint);
 
+
     let backButton = document.getElementsByClassName('back');
     for (let i=0; i<backButton.length; i++){
         backButton[i].addEventListener('click',back);
@@ -25,14 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         optionButtons[i].addEventListener('click', chooseOption);
     }
 
+
+
     let startQuizButton = document.getElementsByClassName('startQuizBtn');
     for (let i=0; i<startQuizButton.length; i++){
         startQuizButton[i].addEventListener('click', startQuiz);
     }
 
 
-    // quiz lists
-    let easyQuiz=[{ name: 'Aizen', img: 'assets/images/EasyQuiz/Aizen.webp', hint: 'This character is from Bleach'},
+
+    easyQuiz=[{ name: 'Aizen', img: 'assets/images/EasyQuiz/Aizen.webp', hint: 'This character is from Bleach'},
         {name: 'Edward Elric', img: 'assets/images/EasyQuiz/Edward_Elric.webp', hint: 'This character is from FullMetal Alchemist'},
         {name: 'Eren Yeager', img: 'assets/images/EasyQuiz/Eren_Yeager.webp', hint: 'This character is from AttackOnTitan'},
         {name: 'Frieza', img: 'assets/images/EasyQuiz/Frieza.webp', hint: 'This character is from Dragon Ball Z'},
@@ -58,8 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {name: 'Vegeta', img: 'assets/images/EasyQuiz/Vegeta.webp', hint: 'This character is from Dragon Ball Z'},
         {name: 'Zoro', img: 'assets/images/EasyQuiz/Zoro.webp', hint: 'This character is from Once Piece'},
     ]
-
-
+    
     let MediumQuiz = [{ name: 'Ace', img: 'assets/images/MediumQuiz/Ace.webp'},
         {name: 'Allmight', img: 'assets/images/MediumQuiz/AllMight.webp'},
         {name: 'Armin', img: 'assets/images/MediumQuiz/Armin.webp'},
@@ -87,39 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
         {name: 'Zabuza', img: 'assets/images/MediumQuiz/Zabuza.webp'},
     ]
 
-
-    let HardQuiz = [{ name: 'Aizawa', img: 'assets/images/HardQuiz/Aizawa.webp'},
-        {name: 'Annie', img: 'assets/images/HardQuiz/Annie.webp'},
-        {name: 'Dazai', img: 'assets/images/HardQuiz/Dazai.webp'},
-        {name: 'genos', img: 'assets/images/HardQuiz/genos.webp'},
-        {name: 'Gintoki', img: 'assets/images/HardQuiz/Gintoki.webp'},
-        {name: 'Grimmjow', img: 'assets/images/HardQuiz/Grimmjow.webp'},
-        {name: 'Guts', img: 'assets/images/HardQuiz/Guts.webp'},
-        {name: 'Haku', img: 'assets/images/HardQuiz/Haku.webp'},
-        {name: 'Harlequin', img: 'assets/images/HardQuiz/Harlequin.webp'},
-        {name: 'Histugaya', img: 'assets/images/HardQuiz/Histugaya.webp'},
-        {name: 'Kenpachi Zaraki', img: 'assets/images/HardQuiz/Kenpachi_Zaraki.webp'},
-        {name: 'Kirishima', img: 'assets/images/HardQuiz/Kirishima.webp'},
-        {name: 'Kisuke Urahara', img: 'assets/images/HardQuiz/Kisuke_Urahara.webp'},
-        {name: 'Leonie', img: 'assets/images/HardQuiz/Leonie.webp'},
-        {name: 'Mina Ashido', img: 'assets/images/HardQuiz/Mina_Ashido.webp'},
-        {name: 'Ryuk', img: 'assets/images/HardQuiz/Ryuk.webp'},
-        {name: 'Sai', img: 'assets/images/HardQuiz/Sai.webp'},
-        {name: 'Sasori', img: 'assets/images/HardQuiz/Sasori.webp'},
-        {name: 'Scar', img: 'assets/images/HardQuiz/Scar.webp'},
-        {name: 'Shisui', img: 'assets/images/HardQuiz/Shisui.webp'},
-        {name: 'Spike', img: 'assets/images/HardQuiz/Spike.webp'},
-        {name: 'Ulquiorra', img: 'assets/images/HardQuiz/Ulquiorra.webp'},
-        {name: 'Urakara', img: 'assets/images/HardQuiz/Urakara.webp'},
-        {name: 'Ymir', img: 'assets/images/HardQuiz/Ymir.webp'},
-        {name: 'Zoe Hange', img: 'assets/images/HardQuiz/Zoe_Hange.webp'},
-    ]
-
-
-
-    // Global Variables
     let PreviousCharacters = []; // The correct answers in the previous rounds 
     let currentAnswer = []; // The current correct answer
+
     let intervalId ; // Holds the function to update the create a 10 second timer every round
     let timerId; // Holds the function to update the timer displayed on the screen every second
     let secondsLeft = 10; // Counter for seconds left of a round
@@ -128,10 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentQuiz ; // Difficulty level of the quiz - easy, medium or hard 
     let totalPoints = 0; // Number of points the user accumalates
 
-
-
-
-    // display the pages
     function displayEasyPage(){
         
         let landingPage = document.getElementById('landing-page');
@@ -153,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         hardPage.style.display = 'block';
     }
     
-    // back button
     function back(){
         let easyPage = document.getElementById('easy-page');
         let mediumPage = document.getElementById('medium-page');
@@ -175,9 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
-
-    // start quiz function
-    
     function startQuiz(){
         let Quiz = document.getElementById('Quiz');
         let easyPage = document.getElementById('easy-page');
@@ -206,37 +168,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-
     // synchronise the clock
     function synchroniseClock(){
 
-        clearInterval(intervalId); // Stop the timer every round
-        clearInterval(timerId); // Stop the timer every round
+        console.log("round"+ roundsCompleted)
+        console.log()
+        clearInterval(intervalId);
+        clearInterval(timerId)
+        updateTimer();
 
-        // only run the timer for 5 rounds
         if (roundsCompleted<=5){
             intervalId = setInterval(() => {           
                 if (roundsCompleted < maxRounds) {
                     runQuiz();
                     roundsCompleted++;
+                    console.log(roundsCompleted)
                 } 
             }, 10000);
             timerId = setInterval(() => {
                 if (secondsLeft > 0) {
                     secondsLeft--;
-                    updateTimer();
+                    updateTimer();                    
+
                 } else {
+                    roundsCompleted++;
                     clearInterval(timerId); // Stop the timer when it reaches 0
+                    alert("Time's up!");
+                    resetTimer();
+                    updateTimer();
+                    synchroniseClock();
+                    runQuiz();
+                    // Optionally handle what happens when the time runs out
                 }
             }, 1000);       
         } else {
             clearInterval(intervalId); // Stop the interval after 5 rounds
             clearInterval(timerId)
+            console.log(totalPoints + 'totalPoints')
             displayFinalPage();
+
         }
         
     }
 
+    
 
     // update the timer
     function updateTimer(){
@@ -277,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
-
     // calcualte correct answer
     function correctAnswer(){
         let correctIndex ;
@@ -303,10 +277,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+
     // shufle array
     function shuffleArray(List){
         return List.sort(() => Math.random() - 0.5);
     }
+
+
 
 
     function showHint(){
@@ -359,6 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+
     function resetTimer() {
         secondsLeft = 10; 
         updateTimer();
@@ -381,6 +359,6 @@ document.addEventListener('DOMContentLoaded', function() {
             message.innerText = 'You can now call yourself an Anime newbie';
         }
 
-    }    
+    }
 
 });
