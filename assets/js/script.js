@@ -207,34 +207,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // synchronise the clock
-    function synchroniseClock(){
 
-        clearInterval(intervalId); // Stop the timer every round
-        clearInterval(timerId); // Stop the timer every round
 
-        // only run the timer for 5 rounds
-        if (roundsCompleted<=5){
-            intervalId = setInterval(() => {           
-                if (roundsCompleted < maxRounds) {
-                    runQuiz();
-                    roundsCompleted++;
-                } 
-            }, 10000);
-            timerId = setInterval(() => {
-                if (secondsLeft > 0) {
-                    secondsLeft--;
-                    updateTimer();
-                } else {
-                    clearInterval(timerId); // Stop the timer when it reaches 0
-                }
-            }, 1000);       
-        } else {
-            clearInterval(intervalId); // Stop the interval after 5 rounds
-            clearInterval(timerId)
-        }
-        
-    }
+
 
 
 });
