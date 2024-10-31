@@ -341,4 +341,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
     }
 
+    function chooseOption(event){
+
+
+        console.log((event.target.parentElement).innerText)
+
+        let buttons = document.getElementsByClassName('selection');
+        for (i=0; i<buttons.length; i++){
+            buttons[i].disabled = true;
+        }
+        let liItem = (event.target.parentElement).innerText;
+        calculateTotalPoints(liItem.trim());
+        roundsCompleted+=1
+        resetTimer();
+        startQuiz();
+
+    }
+
+
 });
