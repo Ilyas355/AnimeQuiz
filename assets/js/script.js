@@ -302,5 +302,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    // shufle array
+    function shuffleArray(List){
+        return List.sort(() => Math.random() - 0.5);
+    }
+
+
 
 });
