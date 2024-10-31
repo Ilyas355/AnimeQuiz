@@ -1,5 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // event listners
+
     let easyPageButton = document.getElementById('easy');
     easyPageButton.addEventListener('click', displayEasyPage);
 
@@ -9,10 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let hardPageButton = document.getElementById('hard');
     hardPageButton.addEventListener('click', displayHardPage);
 
+    let hint = document.getElementById('hint');
+    hint.addEventListener('click', showHint);
+
     let backButton = document.getElementsByClassName('back');
     for (let i=0; i<backButton.length; i++){
         backButton[i].addEventListener('click',back);
     }
+
+    let optionButtons = document.getElementsByClassName('selection');
+    for (let i = 0; i < optionButtons.length; i++) {
+        optionButtons[i].addEventListener('click', chooseOption);
+    }
+
+    let startQuizButton = document.getElementsByClassName('startQuizBtn');
+    for (let i=0; i<startQuizButton.length; i++){
+        startQuizButton[i].addEventListener('click', startQuiz);
+    }
+
+
 
     function displayEasyPage(){
         
