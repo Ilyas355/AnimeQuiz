@@ -322,3 +322,40 @@ h2{
 .congratulations {
     margin-top: 7%;
 }
+
+
+
+/* media query for responsive screen sizes*/
+@media (min-width: 900px){
+    .rules-container{
+        width: 40%;
+    }
+}
+
+@media (max-width: 756px) {
+
+    .quiz-container{
+        width: 80%;
+    }
+    .landing-page-title{
+        height: 45%;
+    }
+
+}
+@media (min-width: 500px){
+    body{
+        padding-bottom: 150px;
+    }
+}
+
+@media (min-width: 500px) and (max-height: 800px){
+    body{
+        padding-bottom: 300px;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 800px){
+    body{
+        padding-bottom: 200px;
+    }
+}
