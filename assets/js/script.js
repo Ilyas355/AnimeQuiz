@@ -320,6 +320,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    
+    function calculateTotalPoints(inputtedAnswer){
+
+        let currentTime = parseInt(document.getElementById('timer').innerText, 10);
+        console.log(currentTime)
+        console.log(inputtedAnswer)
+        console.log(MediumQuiz[currentAnswer[0]].name)
+        if (inputtedAnswer==MediumQuiz[currentAnswer[0]].name){
+            if (currentTime >= 10) {
+                console.log("current-time " + currentTime)
+                totalPoints += 5;
+            } else if (currentTime >= 5) {
+                console.log("current-time " + currentTime)
+                totalPoints += 15;
+            } else if (currentTime <= 5) {
+                console.log("current-time " + currentTime)
+                totalPoints += 10;
+            }
+        }
+        
+    }
 
 });
