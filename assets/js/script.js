@@ -308,5 +308,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    function showHint(){
+        let ButtonContainer = document.getElementById('hint-container')
+        if (ButtonContainer.style.display==='none'){
+            ButtonContainer.style.display='block';
+            console.log(ButtonContainer.style.display);
+        } else {
+            ButtonContainer.style.display='none';
+            console.log(ButtonContainer.style.display);
+        }
+    }
+
+
+    
 
 });
