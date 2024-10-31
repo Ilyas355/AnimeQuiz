@@ -130,7 +130,7 @@ h2{
     margin-right: auto;
     padding: 1rem 1.5rem 1rem 1rem;
     color: #f5f5f5d0;
-    font-size: 85%;
+    font-size: 95%;
 }
 
 /* style buttons on rules page */
@@ -330,6 +330,21 @@ h2{
     .rules-container{
         width: 40%;
     }
+    .rules-text{
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1600px){
+    .rules-container{
+        width: 35%;
+    }
+    .rules-text{
+        font-size: 30px;
+        line-height: 40px;
+        padding: 1rem 2rem 1rem 1rem;
+        width: 60%;
+    }
 }
 
 @media (max-width: 756px) {
@@ -345,6 +360,9 @@ h2{
 @media (min-width: 500px){
     body{
         padding-bottom: 150px;
+    }
+    .rules-text{
+        font-size: 100%;
     }
 }
 
