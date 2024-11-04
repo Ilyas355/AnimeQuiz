@@ -279,26 +279,31 @@ h2 {
     list-style-type: none;
 }
 
-.hint{
-    height: 40px;
-    width: 70px;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    font-family: 'Kanit';
-}
-
-.hint-container{
-    background-color: #4F4F4F;
+.hint {
+    margin-top: 3px;
+    height: 60px;
+    width: 80px;
+    background-color: #4f4f4f;
     padding: 7px;
-    border: 3px solid #F5F5F5;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: "Kanit";
+  }
+  
+  .hint-container {
+    background-color: #4f4f4f;
+    padding: 7px 2px 2px 2px;
+    border: 3px solid #f5f5f5;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #F5F5F5;
-    font-family: 'Kanit';
-    font-size: 70%;
-}
+    color: #f5f5f5;
+    font-family: "Kanit";
+    height: 40%;
+    width: 50%;
+  }
 
 .blur{
     filter: blur(3px); /* Adjust the blur value as needed */
