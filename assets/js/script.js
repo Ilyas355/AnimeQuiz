@@ -362,25 +362,41 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  function calculateTotalPoints(inputtedAnswer){
+  function calculateTotalPoints(inputtedAnswer) {
+    let currentTime = parseInt(document.getElementById("timer").innerText, 10);
+    console.log(currentTime);
+    console.log(inputtedAnswer);
+    console.log(currentQuiz[currentAnswer[0]].name);
 
-      let currentTime = parseInt(document.getElementById('timer').innerText, 10);
-      console.log(currentTime)
-      console.log(inputtedAnswer)
-      console.log(currentQuiz[currentAnswer[0]].name)
-      if (inputtedAnswer==currentQuiz[currentAnswer[0]].name){
-          if (currentTime >= 10) {
-              console.log("current-time " + currentTime)
-              totalPoints += 5;
-          } else if (currentTime >= 5) {
-              console.log("current-time " + currentTime)
-              totalPoints += 15;
-          } else if (currentTime <= 5) {
-              console.log("current-time " + currentTime)
-              totalPoints += 10;
-          }
+    if (resetTime === 15 && inputtedAnswer==currentQuiz[currentAnswer[0]].name) {
+      if (currentTime >= 10) {
+        totalPoints += 15;
+      } else if (currentTime >= 5) {
+        totalPoints += 10;
+      } else if (currentTime <= 5) {
+        totalPoints += 5;
       }
-      
+    }
+    // Check for resetTime === 10 conditions
+    else if (resetTime === 10 && inputtedAnswer==currentQuiz[currentAnswer[0]].name) {
+      if (currentTime >= 7) {
+        totalPoints += 15;
+      } else if (currentTime >= 4) {
+        totalPoints += 10;
+      } else if (currentTime <= 3) {
+        totalPoints += 5;
+      }
+    }
+    // Check for resetTime === 7 conditions
+    else if (resetTime === 7 && inputtedAnswer==currentQuiz[currentAnswer[0]].name) {
+      if (currentTime >= 6) {
+        totalPoints += 15;
+      } else if (currentTime >= 3) {
+        totalPoints += 10;
+      } else if (currentTime <= 2) {
+        totalPoints += 5;
+      }
+    }
   }
 
   function chooseOption(event){
