@@ -207,16 +207,12 @@ document.addEventListener("DOMContentLoaded", function () {
         round = 7000;
         secondsLeft = 7;
       }
-
-
-      if (roundsCompleted<=5){
-          runQuiz();
-      }
-
-      synchroniseClock();      
-
-  }
-
+  
+      synchroniseClock();
+      runQuiz();
+  
+    }
+    
   // synchronise the clock
   function synchroniseClock(){
 
