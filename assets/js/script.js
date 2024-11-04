@@ -114,17 +114,20 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 
 
-  let PreviousCharacters = []; // The correct answers in the previous rounds 
+  let PreviousCharacters = []; // The correct answers in the previous rounds
   let currentAnswer = []; // The current correct answer
-
-  let intervalId ; // Holds the function to update the create a 10 second timer every round
+  let paddingBottom = false;
+  let intervalId; // Holds the function to update the create a 10 second timer every round
   let timerId; // Holds the function to update the timer displayed on the screen every second
-  let secondsLeft = 10; // Counter for seconds left of a round
+  let secondsLeft = 15; // Counter for seconds left of a round
   let roundsCompleted = 1; // Counter for rounds completed
   let maxRounds = 5; // Maximum number of rounds
-  let currentQuiz ; // Difficulty level of the quiz - easy, medium or hard 
+  let currentQuiz; // Difficulty level of the quiz - easy, medium or hard
   let totalPoints = 0; // Number of points the user accumalates
+  let round = 15000;
+  let resetTime = 10;
 
+  
   function displayEasyPage(){
       
       let landingPage = document.getElementById('landing-page');
