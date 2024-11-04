@@ -441,4 +441,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  function playAgainFunction(){
+    roundsCompleted=1
+    totalPoints = 0;
+    secondsLeft = resetTime;
+    let FinalPage = document.getElementById("final-page");
+    FinalPage.style.display = "none";
+    let Quiz = document.getElementById("Quiz");
+    Quiz.style.display = "block";
+    runQuiz();
+    synchroniseClock();
+  }
+
 });
