@@ -346,7 +346,55 @@ h2 {
     margin-top: 7%;
 }
 
-
+.play-again {
+    background-color: #4f4f4f;
+    padding: 7px;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: "Kanit";
+    max-width: 90%;
+    font-size: 120%;
+  }
+  
+  .return-to-main {
+    background-color: #4f4f4f;
+    padding: 7px;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: "Kanit";
+    max-width: 90%;
+    font-size: 120%;
+  }
+  .play-again:hover {
+    transition-duration: 800ms;
+    transform: scale(1.1);
+  }
+  .return-to-main:hover {
+    transition-duration: 800ms;
+    transform: scale(1.1);
+  }
+  
+  .play-again-container {
+    width: 35%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #f5f5f5;
+    margin-top: 3%;
+  }
+  .return-to-main-container {
+    width: 35%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #f5f5f5;
+    margin-top: 3%;
+  }
+  
 
 /* media query for responsive screen sizes*/
 @media (min-width: 900px){
