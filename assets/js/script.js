@@ -212,49 +212,43 @@ document.addEventListener("DOMContentLoaded", function () {
       runQuiz();
   
     }
-    
-  // synchronise the clock
-  function synchroniseClock(){
 
-      console.log("round"+ roundsCompleted)
-      console.log()
+    // synchronise the clock
+    function synchroniseClock() {
       clearInterval(intervalId);
-      clearInterval(timerId)
+      clearInterval(timerId);
       updateTimer();
-
-      if (roundsCompleted<=5){
-          intervalId = setInterval(() => {           
-              if (roundsCompleted < maxRounds) {
-                  runQuiz();
-                  roundsCompleted++;
-                  console.log(roundsCompleted)
-              } 
-          }, 10000);
-          timerId = setInterval(() => {
-              if (secondsLeft > 0) {
-                  secondsLeft--;
-                  updateTimer();                    
-
-              } else {
-                  roundsCompleted++;
-                  clearInterval(timerId); // Stop the timer when it reaches 0
-                  alert("Time's up!");
-                  resetTimer();
-                  updateTimer();
-                  synchroniseClock();
-                  runQuiz();
-                  // Optionally handle what happens when the time runs out
-              }
-          }, 1000);       
+  
+      if (roundsCompleted <= 5) {
+        intervalId = setInterval(() => {
+          if (roundsCompleted < maxRounds) {
+            runQuiz();
+            roundsCompleted++;
+            console.log(roundsCompleted);
+          }
+        }, round);
+        timerId = setInterval(() => {
+          if (secondsLeft > 0) {
+            secondsLeft--;
+            updateTimer();
+          } else {
+  
+            roundsCompleted++;
+            clearInterval(timerId); // Stop the timer when it reaches 0
+            alert("Time's up!");
+            resetTimer();
+            updateTimer();
+            synchroniseClock();
+            runQuiz();
+            // Optionally handle what happens when the time runs out
+          }
+        }, 1000);
       } else {
-          clearInterval(intervalId); // Stop the interval after 5 rounds
-          clearInterval(timerId)
-          console.log(totalPoints + 'totalPoints')
-          displayFinalPage();
-
+        clearInterval(intervalId); // Stop the interval after 5 rounds
+        clearInterval(timerId);
+        displayFinalPage();
       }
-      
-  }
+    }
 
   
 
@@ -266,36 +260,44 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // run the quiz
-  function runQuiz(){
-
-
-      let Answer = correctAnswer();
-      currentAnswer[0] = Answer;
-      let optionsList = falseOptions();
-      optionsList.push(Answer);
-      optionsList = shuffleArray(optionsList);
-
-
-      let img = document.getElementById('quizImage');
-      img.src = currentQuiz[Answer].img;
-
-      let options = document.getElementById('option-values').getElementsByTagName('li');
-      options[0].innerHTML = `<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[0]].name}</span>`
-      options[1].innerHTML = `<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[1]].name}</span>`
-      options[2].innerHTML =`<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[2]].name}</span>`
-      options[3].innerHTML =`<button class="selection"></button><span class="option-text"> ${currentQuiz[optionsList[3]].name}</span>`
-
-      let optionButtons = document.getElementsByClassName('selection');
-      for (let i = 0; i < optionButtons.length; i++) {
-          optionButtons[i].addEventListener('click', chooseOption);
+    // run the quiz
+    function runQuiz() {    
+  
+        let Answer = correctAnswer();
+        currentAnswer[0] = Answer;
+        let optionsList = falseOptions();
+        optionsList.push(Answer);
+        optionsList = shuffleArray(optionsList);
+    
+        let img = document.getElementById("quizImage");
+        img.src = currentQuiz[Answer].img;
+    
+        let options = document
+          .getElementById("option-values")
+          .getElementsByTagName("li");
+        options[0].innerHTML = `<button class="selection">1:   <span class="option-text">${
+          currentQuiz[optionsList[0]].name
+        } </span></button>`;
+        options[1].innerHTML = `<button class="selection">2:   <span class="option-text"> ${
+          currentQuiz[optionsList[1]].name
+        }</span></button>`;
+        options[2].innerHTML = `<button class="selection">3:   <span class="option-text"> ${
+          currentQuiz[optionsList[2]].name
+        }</span></button>`;
+        options[3].innerHTML = `<button class="selection">4:   <span class="option-text"> ${
+          currentQuiz[optionsList[3]].name
+        }</span></button>`;
+    
+        let optionButtons = document.getElementsByClassName("selection");
+        for (let i = 0; i < optionButtons.length; i++) {
+          optionButtons[i].addEventListener("click", chooseOption);
+        }
+    
+        let hint = document.getElementById("hint-container");
+        hint.innerText = currentQuiz[Answer].hint;
+        hideHint();
+    
       }
-
-      let hint = document.getElementById('hint-container')
-      hint.innerText = currentQuiz[Answer].hint;
-
-      
-  }
 
   // calcualte correct answer
   function correctAnswer(){
@@ -331,15 +333,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  function showHint(){
-      let ButtonContainer = document.getElementById('hint-container')
-      if (ButtonContainer.style.display==='none'){
-          ButtonContainer.style.display='block';
-          console.log(ButtonContainer.style.display);
-      } else {
-          ButtonContainer.style.display='none';
-          console.log(ButtonContainer.style.display);
-      }
+  function showHint() {
+    let ButtonContainer = document.getElementById("hint-container");
+    if (ButtonContainer.style.display === "none") {
+      ButtonContainer.style.display = "block";
+      console.log(ButtonContainer.style.display);
+    } else {
+      ButtonContainer.style.display = "none";
+      console.log(ButtonContainer.style.display);
+    }
+
+    let body = document.getElementsByTagName('body')[0].classList;
+    if (paddingBottom==false){
+      body.add('paddingBottom');
+      paddingBottom=true;
+    } else if (paddingBottom==true){
+      body.remove('paddingBottom');
+      paddingBottom=false;
+    }
   }
 
 
