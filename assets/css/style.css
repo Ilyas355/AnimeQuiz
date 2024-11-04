@@ -391,28 +391,9 @@ html {
   }
   
   /* media query for responsive screen sizes*/
-  @media (min-width: 900px) {
-    .play-again-container {
-      margin-top: 5%;
-    }
-    .return-to-main-container {
-      margin-top: 5%;
-    }
-    .rules-container {
-      width: 35%;
-    }
-    .final-page-one-title {
-      height: 30%;
-    }
-    .final-page-two-title {
-      height: 30%;
-    }
-    .rules-text {
-      font-size: 150%;
-    }
-  }
   
-  @media (min-width: 1600px) {
+  /* medium sized screens */
+   @media (min-width: 600px) {
     .play-again-container {
       margin-top: 3%;
     }
@@ -421,7 +402,7 @@ html {
     }
     .rules-container {
       height: 480px;
-      width: 25%;
+      width: 35%;
     }
     .rules-text {
       height: 60%;
@@ -439,9 +420,10 @@ html {
     body {
       height: 100vh;
     }
-  }
+  } 
   
-  @media (max-width: 756px) {
+  /* smaller sized screens */
+  @media (max-width: 600px) {
     .timer {
       margin-right: 17%;
       margin-top: 8%;
@@ -460,12 +442,15 @@ html {
       height: 45%;
     }
   }
+
+  /* font size for medium sized screens*/
   @media (min-width: 500px) {
     .rules-text {
       font-size: 100%;
     }
   }
   
+  /* screens that do not not have a large height */
   @media (max-height: 1000px) {
     .quiz-container {
       max-height: 600px;
@@ -484,14 +469,23 @@ html {
     }
   }
   
-  @media (min-width: 500px) and (max-height: 800px) {
+  /* font size for larger screens */
+  @media (max-width: 1100px){
+    .rules-text{
+      font-size: 70%;
+    }
+  }
+
+
+  /* padding bottom to fix the UI bug of the body not being long enough */
+  @media (min-width: 500px) and (max-height: 1000px) {
     body {
-      padding-bottom: 200px;
+      padding-bottom: 300px;
     }
   }
   
   @media (max-width: 400px) and (max-height: 800px) {
     body {
-      padding-bottom: 150px;
+      padding-bottom: 200px;
     }
   }
