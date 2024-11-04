@@ -16,19 +16,19 @@ html {
     padding-bottom: 350px;
   }
   
-/* header styles */
-h1:hover{
+  /* header styles */
+  h1:hover {
     animation: spin 2s ease;
     animation-iteration-count: 1;
-}
-
-.header{
-    background-color: #F5F5F5;
+  }
+  
+  .header {
+    background-color: #f5f5f5;
     padding-bottom: 2px;
     text-align: center;
     background-color: #dbd6d6;
-}
-h2 {
+  }
+  h2 {
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -37,38 +37,38 @@ h2 {
     font-family: "Public Sans";
     font-size: 28px;
   }  
+  /* page content styles */
+  /* structure the title */
 
-/* page content styles */
-/* structure the title */
-
-.title{
-    background-color: #4F4F4F;
+  .title {
+    background-color: #4f4f4f;
     padding: 7px;
-    border: 3px solid #F5F5F5;
+    border: 3px solid #f5f5f5;
     border-radius: 8px;
-    color: #F5F5F5;
-    font-family: 'Kanit';
+    color: #f5f5f5;
+    font-family: "Kanit";
     max-width: 90%;
-}
-
-.landing-page-title {
-    background-color: #4F4F4F;
+  }
+  
+  .landing-page-title {
+    background-color: #4f4f4f;
     padding: 7px;
-    border: 3px solid #F5F5F5;
+    border: 3px solid #f5f5f5;
     border-radius: 8px;
     width: 40%;
     height: 40%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #F5F5F5;
+    color: #f5f5f5;
     margin-top: 8%;
-    font-family: 'Kanit';
+    font-family: "Kanit";
+    font-size: 110%;
     max-width: 90%;
-}
-
-/* style buttons on landing page */
-.btn-container{
+  }
+  
+  /* style buttons on landing page */
+  .btn-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -76,22 +76,22 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    font-family: 'Kanit';
-}
-
-.btn-big{
+    font-family: "Kanit";
+  }
+  
+  .btn-big {
     height: 130px;
     width: 140px;
     font-size: 28px;
-}
-
-/* add animations to the buttons for better interactivity */
-.btn-big:hover{
+  }
+  
+  /* add animations to the buttons for better interactivity */
+  .btn-big:hover {
     transition-duration: 800ms;
     transform: scale(1.1);
-}
-
-@keyframes spin {
+  }
+  
+  @keyframes spin {
     from {
       transform: rotate(0deg);
     }
@@ -99,10 +99,10 @@ h2 {
       transform: rotate(360deg);
     }
   }
-
-/* rules pages styles */
-/* styles for the container of the rules div */
-.rules-container {
+  
+  /* rules pages styles */
+  /* styles for the container of the rules div */
+  .rules-container {
     height: auto;
     width: 60%;
     font-family: "Kanit";
@@ -113,16 +113,16 @@ h2 {
     margin-left: auto;
     margin-right: auto;
   }
-.rules-container h3{
+  .rules-container h3 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-}
-.rules-container p{
+  }
+  .rules-container p {
     font-size: 16px;
-}
-/* styles for the rules div itself */
-.rules-text {
+  }
+  /* styles for the rules div itself */
+  .rules-text {
     background-color: #4f4f4f;
     height: auto;
     width: 65%;
@@ -135,7 +135,6 @@ h2 {
     font-size: 75%;
   }
   
-
   /* style buttons on rules page */
   .buttons {
     width: 60%;
@@ -169,21 +168,19 @@ h2 {
     font-family: "Kanit";
   }
   
-
-/* add animations to the buttons for better interactivity */
-.startQuizBtn:hover{
+  /* add animations to the buttons for better interactivity */
+  .startQuizBtn:hover {
     transition-duration: 1000ms;
     transform: scale(1.1);
-}
-.back:hover{
+  }
+  .back:hover {
     transition-duration: 1000ms;
     transform: scale(1.1);
-}
-
-
-/* game container */
-
-#timer {
+  }
+  
+  /* game container */
+  
+  #timer {
     height: 30px;
     width: 15px;
     float: right;
@@ -197,7 +194,7 @@ h2 {
     text-align: center;
     width: 70px;
   }
-
+  
   .quiz-container {
     height: 70%;
     width: 40%;
@@ -210,20 +207,19 @@ h2 {
     margin-right: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
   }
-
-
-.imageContainer{
+  
+  .imageContainer {
     max-height: 300px;
     width: 400px;
-}
-#quizImage{
+  }
+  #quizImage {
     max-height: 180px;
     max-width: 90%;
-    border: 5px solid #4F4F4F;
+    border: 5px solid #4f4f4f;
     border-radius: 5px;
-}
-
-.image-Question{
+  }
+  
+  .image-Question {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -231,26 +227,25 @@ h2 {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    
-}
-#question-picture{
+  }
+  #question-picture {
     width: 50%;
     height: 50%;
     padding: 20px; /* Increased padding for better spacing */
-    color: #4F4F4F; /* Keep the color */
+    color: #4f4f4f; /* Keep the color */
     font-size: 100%; /* Slightly larger font size */
     font-weight: 700; /* Slightly lighter weight */
-    background-color: #E8E8E8; /* Softer background color */
+    background-color: #e8e8e8; /* Softer background color */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center; /* Center-align the text */
-}
-
-.options{
-    background-color: #5A5A5A;
+  }
+  
+  .options {
+    background-color: #5a5a5a;
     height: auto;
     width: 70%;
-    border: 4px solid #4F4F4F;
+    border: 4px solid #4f4f4f;
     border-radius: 8px;
     margin-left: auto;
     margin-right: auto;
@@ -258,9 +253,9 @@ h2 {
     padding: 1rem 3rem 1rem 1rem;
     padding: 1.5rem 2rem; /* Adjusted padding for better spacing */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-}
-
-.selection {
+  }
+  
+  .selection {
     font-size: 105%;
     margin: 5px;
     background-color: #4f4f4f;
@@ -274,12 +269,12 @@ h2 {
     transition-duration: 1000ms;
     transform: scale(1.1);
   }
-
-.list{
+  
+  .list {
     list-style-type: none;
-}
-
-.hint {
+  }
+  
+  .hint {
     margin-top: 3px;
     height: 60px;
     width: 80px;
@@ -304,49 +299,49 @@ h2 {
     height: 40%;
     width: 50%;
   }
-
-.blur{
+  
+  .blur {
     filter: blur(3px); /* Adjust the blur value as needed */
-}
-
-
-/* styles for final page */
-.final-page-one-title{
-    background-color: #4F4F4F;
+  }
+  
+  /* styles for final page */
+  
+  .final-page-one-title {
+    background-color: #4f4f4f;
     padding: 7px;
-    border: 3px solid #F5F5F5;
+    border: 3px solid #f5f5f5;
     border-radius: 8px;
     width: 30%;
     height: 40%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #F5F5F5;
+    color: #f5f5f5;
     margin-top: 8%;
-    font-family: 'Kanit';
+    font-family: "Kanit";
     max-width: 90%;
-}
-.final-page-two-title{
-    background-color: #4F4F4F;
+  }
+  .final-page-two-title {
+    background-color: #4f4f4f;
     padding: 7px;
-    border: 3px solid #F5F5F5;
+    border: 3px solid #f5f5f5;
     border-radius: 8px;
     width: 35%;
     height: 40%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color: #F5F5F5;
+    color: #f5f5f5;
     margin-top: 8%;
-    font-family: 'Kanit';
+    font-family: "Kanit";
     max-width: 90%;
-}
-
-.congratulations {
+  }
+  
+  .congratulations {
     margin-top: 7%;
-}
-
-.play-again {
+  }
+  
+  .play-again {
     background-color: #4f4f4f;
     padding: 7px;
     border: 3px solid #f5f5f5;
@@ -395,56 +390,108 @@ h2 {
     margin-top: 3%;
   }
   
-
-/* media query for responsive screen sizes*/
-@media (min-width: 900px){
-    .rules-container{
-        width: 40%;
+  /* media query for responsive screen sizes*/
+  @media (min-width: 900px) {
+    .play-again-container {
+      margin-top: 5%;
     }
-    .rules-text{
-        font-size: 150%;
+    .return-to-main-container {
+      margin-top: 5%;
     }
-}
-
-@media (min-width: 1600px){
-    .rules-container{
-        width: 35%;
+    .rules-container {
+      width: 35%;
     }
-    .rules-text{
-        font-size: 30px;
-        line-height: 40px;
-        padding: 1rem 2rem 1rem 1rem;
-        width: 60%;
+    .final-page-one-title {
+      height: 30%;
     }
-}
-
-@media (max-width: 756px) {
-
-    .quiz-container{
-        width: 80%;
+    .final-page-two-title {
+      height: 30%;
     }
-    .landing-page-title{
-        height: 45%;
+    .rules-text {
+      font-size: 150%;
     }
-
-}
-@media (min-width: 500px){
-    body{
-        padding-bottom: 150px;
+  }
+  
+  @media (min-width: 1600px) {
+    .play-again-container {
+      margin-top: 3%;
     }
-    .rules-text{
-        font-size: 100%;
+    .return-to-main-container {
+      margin-top: 3%;
     }
-}
-
-@media (min-width: 500px) and (max-height: 800px){
-    body{
-        padding-bottom: 300px;
+    .rules-container {
+      height: 480px;
+      width: 25%;
     }
-}
-
-@media (max-width: 400px) and (max-height: 800px){
-    body{
-        padding-bottom: 200px;
+    .rules-text {
+      height: 60%;
+      line-height: 170%;
+      width: 60%;
     }
-}
+    .final-page-one-title {
+      width: 20%;
+      margin-top: 5%;
+    }
+    .final-page-two-title {
+      width: 25%;
+      margin-top: 5%;
+    }
+    body {
+      height: 100vh;
+    }
+  }
+  
+  @media (max-width: 756px) {
+    .timer {
+      margin-right: 17%;
+      margin-top: 8%;
+      margin-bottom: 3%;
+    }
+    .quiz-container {
+      width: 80%;
+    }
+    .landing-page-title {
+      height: 45%;
+    }
+    .final-page-one-title {
+      height: 45%;
+    }
+    .final-page-two-title {
+      height: 45%;
+    }
+  }
+  @media (min-width: 500px) {
+    .rules-text {
+      font-size: 100%;
+    }
+  }
+  
+  @media (max-height: 1000px) {
+    .quiz-container {
+      max-height: 600px;
+    }
+  
+    .options {
+      max-height: 50%;
+    }
+    .hint-container {
+      float: inline-end;
+      margin-bottom: 20%;
+    }
+  
+    body {
+      height: 100vh;
+    }
+  }
+  
+  @media (min-width: 500px) and (max-height: 800px) {
+    body {
+      padding-bottom: 200px;
+    }
+  }
+  
+  @media (max-width: 400px) and (max-height: 800px) {
+    body {
+      padding-bottom: 150px;
+    }
+  }
