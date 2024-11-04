@@ -353,6 +353,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function hideHint(){
+    let ButtonContainer = document.getElementById("hint-container");
+    if (ButtonContainer.style.display === "block") {
+      ButtonContainer.style.display = "none";
+      console.log(ButtonContainer.style.display);
+    } 
+  }
+
 
   function calculateTotalPoints(inputtedAnswer){
 
