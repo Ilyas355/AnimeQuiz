@@ -428,6 +428,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let hint = document.getElementById("hint-container");
     hint.innerText = currentQuiz[Answer].hint;
     hideHint();
+
   }
 
   /**
