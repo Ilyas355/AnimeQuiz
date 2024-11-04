@@ -135,31 +135,39 @@ h2 {
     font-size: 85%;
 }
 
-/* style buttons on rules page */
-.buttons{
-    width:60%;
-    margin-top: 30px;
+  /* style buttons on rules page */
+  .buttons {
+    width: 60%;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.back {
-    height: 40px;
-    width: 70px;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    font-family: 'Kanit';
-}
-.startQuizBtn{
-    height: 40px;
-    width: 70px;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    font-family: 'Kanit';
-}
+  }
+  
+  .back {
+    height: 80px;
+    width: 90px;
+    background-color: #4f4f4f;
+    padding: 7px;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: "Kanit";
+  }
+  .startQuizBtn {
+    height: 80px;
+    width: 90px;
+    background-color: #4f4f4f;
+    padding: 7px;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    color: #f5f5f5;
+    font-family: "Kanit";
+  }
+  
 
 /* add animations to the buttons for better interactivity */
 .startQuizBtn:hover{
