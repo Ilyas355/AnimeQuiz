@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let round = 15000;
   let resetTime = 10;
 
-  
+
   function displayEasyPage(){
       
       let landingPage = document.getElementById('landing-page');
@@ -135,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
       let easyPage = document.getElementById('easy-page');
       easyPage.style.display = 'block';
       currentQuiz = easyQuiz;
-      console.log(currentQuiz.length);
   }
   function displayMediumPage(){
       let landingPage = document.getElementById('landing-page');
@@ -143,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
       let MediumPage = document.getElementById('medium-page');
       MediumPage.style.display = 'block';
       currentQuiz = MediumQuiz;
-      console.log(MediumQuiz.length);        
 
   }
   function displayHardPage(){
@@ -152,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       let hardPage = document.getElementById('hard-page');
       hardPage.style.display = 'block';
       currentQuiz = hardQuiz;
-      console.log(currentQuiz);
   }
   
   function back(){
@@ -184,23 +181,31 @@ document.addEventListener("DOMContentLoaded", function () {
       let gameTitle = document.getElementById('game-title');
       let hint = document.getElementById('hint');
 
-      if (easyPage.style.display = 'block'){
-          easyPage.style.display = 'none';
-          Quiz.style.display = 'block';
-          gameTitle.innerText = 'Easy Mode'
-
+      if ((easyPage.style.display = "block")) {
+        easyPage.style.display = "none";
+        Quiz.style.display = "block";
+        gameTitle.innerText = "Easy Mode";
+        resetTime = 15;
+        round = 15000;
+        secondsLeft = 15;
       }
-      if (MediumPage.style.display === 'block'){
-          MediumPage.style.display = 'none';
-          Quiz.style.display = 'block';
-          gameTitle.innerText = 'Medium Mode'
-          hint.style.display = 'none';
-      } 
-      if (hardPage.style.display === 'block'){
-          hardPage.style.display = 'none';
-          Quiz.style.display = 'block';
-          gameTitle.innerText = 'Hard Mode';
-          hint.style.display = 'none';
+      if (MediumPage.style.display === "block") {
+        MediumPage.style.display = "none";
+        Quiz.style.display = "block";
+        gameTitle.innerText = "Medium Mode";
+        hint.style.display = "none";
+        resetTime = 10;
+        round = 10000;
+        secondsLeft = 10;
+      }
+      if (hardPage.style.display === "block") {
+        hardPage.style.display = "none";
+        Quiz.style.display = "block";
+        gameTitle.innerText = "Hard Mode";
+        hint.style.display = "none";
+        resetTime = 7;
+        round = 7000;
+        secondsLeft = 7;
       }
 
 
