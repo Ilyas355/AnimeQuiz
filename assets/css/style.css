@@ -1,19 +1,21 @@
 /* general styles */
-html{
+html {
     margin: 0;
     padding-top: 0;
+    padding-bottom: 0;
     background-color: #dbd6d6;
-}
-
-body{
-    height: 100%;
+  }
+  
+  body {
+    height: auto;
     margin: 0;
-    background-color: #F5F5F5;
-    height: 100vh;
-    background: url('../images/Anime-scenery.webp') no-repeat center/cover;
-
-}
-
+    background-color: #f5f5f5;
+    background: url("../images/Anime-scenery.webp") no-repeat center/cover;
+  }
+  .paddingBottom {
+    padding-bottom: 350px;
+  }
+  
 /* header styles */
 h1:hover{
     animation: spin 2s ease;
