@@ -529,6 +529,14 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 ![HTML Validate](docs/readme_images/htmlValidate.png)
 
 
+### Unfixed errors
+* UI Issue
+    * There is a slight UI issue on laptop and smaller screens on the easy page when the hint container is pressed.
+    * If the hint container is pressed and an option is selected without closing the hint, the hint automatically closes by itself but the next round if the user clicks the hint button again the body shrinks to where a small gray footer appears - meaning the html background acts as a footer.
+    * However, this automatically fixes if the user presses the hint button again.
+
+![UI Fault](docs/readme_images/UIFault.png) 
+
 ## Deployment
 
 ### Version Control
