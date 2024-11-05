@@ -206,6 +206,10 @@ View the live site [here](https://ilyas355.github.io/AnimeQuiz/)
 
 ### Existing Features
 
+* Landing Page to select difficulty level
+* Rules Page for each difficulty level
+* Functioning quiz for each difficulty
+* Final page displaying the results
 
 
 ## Design
