@@ -301,7 +301,8 @@ Final Page
     * favicon files were created at https://favicon.io/favicon-converter/ 
 * balsamiq
     * wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
-
+* Canva
+    * This was used to create the logo in header and make the images for cards 
 
 
 ## Testing
@@ -315,6 +316,7 @@ Final Page
 | Firefox         |        Good        |           Good          |
 
 
+<br>
 
 ### Tools Testing
 
@@ -330,6 +332,7 @@ Final Page
     - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used for generating the lighthouse report and further reccomended documentation was utilised to increase the score.
 
 
+<br>
 
 ### Accessibility
 [Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
@@ -345,23 +348,150 @@ Testing was focused to ensure the following criteria were met:
 - Aria properties have been implemented correctly
 - WCAG 2.1 Coding best practices being followed
 
-Manual tests were also performed to ensure the website was accessible as possible and an accessibility issue was identified.
+Manual tests were also performed to ensure the website was accessible as possible.
 
 
+<br>
+
+### Manual Testing
 
 
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Outcome</th>
+        <th>Example</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td>Easy Button</td>
+        <td>Validate if the easy button displays the easy rules page</td>
+        <td><img src="docs/readme_images/Easy-rules-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Medium Button</td>
+        <td>Validate if the medium button displays the medium rules page</td>
+        <td><img src="docs/readme_images/Medium-rules-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Hard Button</td>
+        <td>Validate if the hard button displays the hard rules page</td>
+        <td><img src="docs/readme_images/Hard-rules-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Back Button</td>
+        <td>Validate if the back button for the easy rules page  displays the landing page</td>
+        <td><img src="docs/readme_images/Landing-page-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Back Button</td>
+        <td>Validate if the back button for the medium rules page  displays the landing page</td>
+        <td><img src="docs/readme_images/Landing-page-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Back Button</td>
+        <td>Validate if the back button for the hard rules page displays the landing page</td>
+        <td><img src="docs/readme_images/Landing-page-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Start Quiz Button</td>
+        <td>Validate if the start quiz button for the easy rules page displays the easy quiz</td>
+        <td><img src="docs/readme_images/Easy-quiz-real.png"></td>
+        <td>Pass</td>
+    </tr>    
+    <tr>
+        <td>Start Quiz Button</td>
+        <td>Validate if the start quiz button for the medium rules page displays the medium quiz</td>
+        <td><img src="docs/readme_images/Medium-quiz-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Start Quiz Button</td>
+        <td>Validate if the start quiz button for the hard rules page displays the hard quiz</td>
+        <td><img src="docs/readme_images/Hard-Quiz-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Easy Quiz Timer</td>
+        <td>Validate if the easy quiz timer is 15 seconds</td>
+        <td><img src="docs/readme_images/15secondTimer.png"></td>
+        <td>Pass</td>
+    </tr> 
+    <tr>
+        <td>Medium Quiz Timer</td>
+        <td>Validate if the medium quiz timer is 10 seconds</td>
+        <td><img src="docs/readme_images/10secondTimer.png"></td>
+        <td>Pass</td>
+    </tr>   
+    <tr>
+        <td>Hard Quiz Timer</td>
+        <td>Validate if the Hard quiz timer is 7 seconds</td>
+        <td><img src="docs/readme_images/7secondTimer.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Hint container</td>
+        <td>Validate if the hint button displays the correct hint when pressed</td>
+        <td><img src="docs/readme_images/hint-container.png"></td>
+        <td>Pass</td>
+    </tr>    
+    <tr>
+        <td>Easy Quiz Test</td>
+        <td>Validate if the easy quiz works, will choose 3 correct answers and 2 wrong answers. <br>
+        2 answers will be within 5 seconds and 1 will be within 10 seconds <br> 
+        It should result in a total points tally of 40 points</td>
+        <td><img src="docs/readme_images/EasyQuizTest.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Medium Quiz Test</td>
+        <td>Validate if the medium quiz works, will choose 3 correct answers and 2 wrong answers. <br>
+        2 answers will be within 3 seconds and 1 will be within 6 seconds <br> 
+        It should result in a total points tally of 40 points <br>
+        And should display the message 'You can now call yourself an anime expert'</td>
+        <td><img src="docs/readme_images/EasyQuizTest.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Hard Quiz Test</td>
+        <td>Validate if the hard quiz works, will choose 3 correct answers and 2 wrong answers. <br>
+        2 answers will be within 2 seconds and 1 will be within 5 seconds <br> 
+        It should result in a total points tally of 40 points <br>
+        And should display the message 'You can now call yourself an anime expert'</td>
+        <td><img src="docs/readme_images/EasyQuizTest.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Play again Button</td>
+        <td>Validate if the play again button restarts the quiz the user was on <br>
+        It should return to the medium quiz </td>
+        <td><img src="docs/readme_images/Medium-quiz-real.png"></td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Return To Main Button</td>
+        <td>Validate if the return to main button returns users to the landing page</td>
+        <td><img src="docs/readme_images/Landing-page-real.png"></td>
+        <td>Pass</td>
+    </tr>
+
+</table>
+
+<br>
 
 ### Lighthouse testing
 
 
+![Lighthouse Report](docs/readme_images/LighthouseReport.png)
 
 
-
-### Functional Testing
-
-
-
-
+<br>
 
 ### Responsiveness
 
@@ -378,8 +508,10 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 | Nest Hub Max       |           Good          |           N/A           |           Good          |
 | Asus Zenbook Fold  |           Good          |           N/A           |           Good          |
 
+<br>
 
 ### Validator Testing 
+
 
 
 
