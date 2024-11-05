@@ -523,6 +523,11 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 ![CSS Validate](docs/readme_images/CSSValidate.png)
 
 
+- HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+
+![HTML Validate](docs/readme_images/htmlValidate.png)
+
 
 ## Deployment
 
