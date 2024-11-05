@@ -512,6 +512,15 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 
 ### Validator Testing 
 
+- JavaScript
+  - No errors were returned when passing through the [JShint validator](https://jshint.com/)
+
+![JS Validate](docs/readme_images/JSvalidate.png)
+
+- CSS
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
+
+![CSS Validate](docs/readme_images/CSSValidate.png)
 
 
 
