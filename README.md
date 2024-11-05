@@ -2,6 +2,7 @@
 
 ## Site Goals
 
+
 The goal of this site is to create an engaging and fun way for anime fans to test their knowledge of iconic characters from popular anime series.
 <br>
 
@@ -10,33 +11,198 @@ By offering multiple difficulty levels, the site aims to challenge both beginner
 
 View the live site [here](https://ilyas355.github.io/AnimeQuiz/)
 
+![Mockup1](docs/readme_images/Mockup1.png)
+
+![Mockup2](docs/readme_images/Mockup2.png)
+
+![Mockup3](docs/readme_images/Mockup3.png)
+
+
 ## Features
 
 ### Site Wide
 
+![Site Wisde](docs/readme_images/Header.png)
+
+* Header
+    * Comprised of the name of the game and a gray background
+    * Informs the user what the website is about along with providing an appealing aesthetic look to the page
+
+
+![favicon](docs/readme_images/favicon-96x96.png)
+
+* Favicon
+    * A site wide favicon iimplemented with an anime skull fag.
+    * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+
 
 ### Landing Page
+
+![Landing Page](docs/readme_images/Landing-page-real.png)
+
+* Title 1
+    * This title asks the user if they know Anime.
+    * The purpose of this title is to attract users to the page and enjoy the quiz.
+
+* Title 2
+    * The second title prompts the user to select a difficulty level for the quiz they would like to play.
+    * The purpose of this title is to help users to understand what the buttons below are for so that the can continue with the quiz.
+* Easy Button
+    * The easy button redirects the user to the easy rules page.
+    * This buttons redirects the user to the easy rules page so that they can understand the rules of the quiz before starting. 
+* Medium Button
+    * The medium button redirects the user to the medium rules page.
+    * This buttons redirects the user to the medium rules page so that they can understand the rules of the quiz before starting. 
+* Hard Button
+    * The hard button redirects the user to the hard rules page.
+    * This buttons redirects the user to the hard rules page so that they can understand the rules of the quiz before starting. 
 
 
 ### Easy Rules Page
 
+![Easy Rules Page](docs/readme_images/Easy-rules-real.png)
+
+* Title
+    * The title informs the user the level of the quiz the rules below are for.
+    * The helps the user match the rules of the quiz with the difficulty level.
+
+* Rules Box
+    * The rules box contains the rules for the quiz the user is about to start. 
+    * This informs the user how much time they have for the quiz and how to maximise the points they can get from each round.
+
+* Back Button
+    * The back button redirects the user back to the landing page.
+    * This gives the user the option to go back and change the difficulty level for the quiz.
+
+* Start Quiz Button
+    * The start quiz button begins the quiz with the easy difficulty level when clicked.
+    * This allows the user to swiftly begin the quiz upon understanding the rules.
 
 
 ### Medium Rules Page
 
+![Medium Rules Page](docs/readme_images/Medium-rules-real.png)
 
+* Title
+    * The title informs the user the level of the quiz the rules below are for.
+    * The helps the user match the rules of the quiz with the difficulty level.
+
+* Rules Box
+    * The rules box contains the rules for the quiz the user is about to start. 
+    * This informs the user how much time they have for the quiz and how to maximise the points they can get from each round.
+
+* Back Button
+    * The back button redirects the user back to the landing page.
+    * This gives the user the option to go back and change the difficulty level for the quiz.
+
+* Start Quiz Button
+    * The start quiz button begins the quiz with the medium difficulty level when clicked.
+    * This allows the user to swiftly begin the quiz upon understanding the rules.
 
 ### Hard Rules Page
 
 
+![Hard Rules Real](docs/readme_images/Hard-rules-real.png)
 
-### Quiz Page
+* Title
+    * The title informs the user the level of the quiz the rules below are for.
+    * The helps the user match the rules of the quiz with the difficulty level.
 
+* Rules Box
+    * The rules box contains the rules for the quiz the user is about to start. 
+    * This informs the user how much time they have for the quiz and how to maximise the points they can get from each round.
 
+* Back Button
+    * The back button redirects the user back to the landing page.
+    * This gives the user the option to go back and change the difficulty level for the quiz.
+
+* Start Quiz Button
+    * The start quiz button begins the quiz with the hard difficulty level when clicked.
+    * This allows the user to swiftly begin the quiz upon understanding the rules.
+
+### Quiz Page - Easy
+![Easy Quiz Page](docs/readme_images/Easy-quiz-real.png)
+
+* Title
+    * The title tells the user the difficulty level of the quiz that's being displayed.
+    * This allows the user to know the difficulty level for the quiz they are currently on.
+* Timer
+    * The timer displayed on the screen starts from 15 seconds and decrements every second until the round is over.
+    * Allows the user to know how much time they currently have left of the quiz.
+* Image
+    * The image displayed on the screen displays a character from an anime programme.
+    * This is shown so that the user can guess what character it is using the optioms below.
+* Quiz Question
+    * The question asks the user what the name of the character being displayed is so that the user can select an option.
+    * This prompts the user to select an option to decide what character is currently being displayed on the screen.
+* Option Box
+    * The option box is comprised of 4 different options with 3 wrong answers and 1 right answer.
+    * The options allow the user to select what character they think is being displayed on the screen and begins a new round when any one of the options are seleceted.
+
+* Hint Button
+    * The hint button displays a box containing a hint to what anime the character is from to help the user identify what the character's name is.
+    * This gives the user the option of reading a hint to help identify who the character is. 
+
+### Quiz Page - Medium
+
+![Medium Quiz Page](docs/readme_images/Medium-quiz-real.png)
+
+* Title
+    * The title tells the user the difficulty level of the quiz that's being displayed.
+    * This allows the user to know the difficulty level for the quiz they are currently on.
+* Timer
+    * The timer displayed on the screen starts from 10 seconds and decrements every second until the round is over.
+    * Allows the user to know how much time they currently have left of the quiz.
+* Image
+    * The image displayed on the screen displays a character from an anime programme.
+    * This is shown so that the user can guess what character it is using the optioms below.
+* Quiz Question
+    * The question asks the user what the name of the character being displayed is so that the user can select an option.
+    * This prompts the user to select an option to decide what character is currently being displayed on the screen.
+* Option Box
+    * The option box is comprised of 4 different options with 3 wrong answers and 1 right answer.
+    * The options allow the user to select what character they think is being displayed on the screen and begins a new round when any one of the options are seleceted.
+
+### Quiz Page - Hard
+
+![Hard Quiz Page](docs/readme_images/Hard-Quiz-real.png)
+
+* Title
+    * The title tells the user the difficulty level of the quiz that's being displayed.
+    * This allows the user to know the difficulty level for the quiz they are currently on.
+* Timer
+    * The timer displayed on the screen starts from 7 seconds and decrements every second until the round is over.
+    * Allows the user to know how much time they currently have left of the quiz.
+* Image
+    * The image displayed on the screen displays a character from an anime programme.
+    * This is shown so that the user can guess what character it is using the optioms below.
+* Quiz Question
+    * The question asks the user what the name of the character being displayed is so that the user can select an option.
+    * This prompts the user to select an option to decide what character is currently being displayed on the screen.
+* Option Box
+    * The option box is comprised of 4 different options with 3 wrong answers and 1 right answer.
+    * The options allow the user to select what character they think is being displayed on the screen and begins a new round when any one of the options are seleceted.
 
 ### Final Page
 
+![Final Page](docs/readme_images/Final-page-real.png)
 
+* Title
+    * Congratulates the user for completing the quiz
+    * Gives the user a positive message after completing the quiz to improve the user's experience.
+
+* Title 2
+    * Displays the total points the user scored on the quiz.
+    * Allows the user to know their results from the quiz they took.
+* Title 3
+    * Displays 1 of 3 messages based on the number of points they recieved out of 75.
+    * Adds to the user experience factor of the quiz and acts as a final message to the user.
+* Play Again Button
+    * Restarts the quiz with the same difficulty the user selected.
+    * Gives the user a shortcut to try again with the same difficulty.
+* Return To Main
+    * Redirects the user to the landing page.
+    * Gives the user the option to select a different difficulty level of the quiz.
 
 ### Existing Features
 
@@ -92,7 +258,7 @@ Medium Quiz Page
 
 <br>
 
-![Medium Quiz Page](docs/readme_images/EasyQuizPage.png)
+![Medium Quiz Page](docs/readme_images/MediumQuizPage.png)
 
 <br>
 
