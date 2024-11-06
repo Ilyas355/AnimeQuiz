@@ -537,6 +537,10 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 
 ![UI Fault](docs/readme_images/UIFault.png) 
 
+* UI Issue
+    * on laptop screens there is also a slight grey footer much smaller than the footer above for the easy quiz.
+
+
 ## Deployment
 
 ### Version Control
@@ -576,12 +580,14 @@ Navigate to the GitHub Repository you want to clone to use locally:
 
 The project will now of been cloned on your local machine for use.
 
+<br>
+
 ## Credits
-
-
 
 ### Content
 
-
+* Questions and anime character images were sourced from popular anime series to create an engaging experience for anime fans.
 
 ### Media
+
+* Images of characters were carefully selected to ensure recognition by anime fans from google images.
