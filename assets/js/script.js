@@ -593,7 +593,7 @@ document.addEventListener("DOMContentLoaded", function () {
     FinalPage.style.display = "block";
 
     let score = document.getElementById("amount");
-    score.innerText = `You scored ${totalPoints} points on this quiz`;
+    score.innerText = `You scored ${totalPoints}/75 points on this quiz`;
     let message = document.getElementById("message");
     if (totalPoints > 60) {
       message.innerText = `You can now call yourself the Anime Master`;
