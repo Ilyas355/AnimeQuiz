@@ -545,7 +545,7 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 
 ### Version Control
 
-The site was created using the Visual Studio code editor and pushed to github to the remote repository ‘tacos-travels’.
+The site was created using the Visual Studio code editor and pushed to github to the remote repository ‘Anime Quiz’.
 
 The following git commands were used throughout development to push code to the remote repo:
 

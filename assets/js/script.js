@@ -332,6 +332,12 @@ document.addEventListener("DOMContentLoaded", function () {
     runQuiz();
   }
 
+  function clearTimers() {
+    clearInterval(intervalId);
+    clearInterval(timerId);
+    intervalId = null;
+    timerId = null;
+  }
   /**
    * The synchronise clock function carries out multiple tasks when called:
    * Stops the timers initally when the function is called
@@ -342,37 +348,33 @@ document.addEventListener("DOMContentLoaded", function () {
    * 2b: In which if it has finished and there has been no input increments the roundcompleted variable, stops the timer, alerts the user, resets the timer,updates the timer displayed on the screen and calls the relevant functions
    * And if the rounds have reached 5 stops both timers and calls the display final page function
    */
+
   function synchroniseClock() {
-    clearInterval(intervalId);
-    clearInterval(timerId);
+    clearTimers(); // Clear any existing timers
     updateTimer();
 
-    if (roundsCompleted <= 5) {
-      intervalId = setInterval(() => {
-        if (roundsCompleted < maxRounds) {
-          runQuiz();
-          roundsCompleted++;
-        }
-      }, round);
-      timerId = setInterval(() => {
-        if (secondsLeft > 0) {
-          secondsLeft--;
-          updateTimer();
-        } else {
-          roundsCompleted++;
-          clearInterval(timerId); // Stop the timer when it reaches 0
-          alert("Time's up!");
-          resetTimer();
-          updateTimer();
-          synchroniseClock();
-          runQuiz();
-          // Optionally handle what happens when the time runs out
-        }
-      }, 1000);
+    if (roundsCompleted <= maxRounds) {
+        intervalId = setInterval(() => {
+            if (roundsCompleted < maxRounds) {
+                runQuiz();
+            }
+        }, round);
+
+        timerId = setInterval(() => {
+            if (secondsLeft > 0) {
+                secondsLeft--;
+                updateTimer();
+            } else {
+                roundsCompleted++;
+                alert("Time's up!");
+                resetTimer();
+                if (roundsCompleted <= maxRounds) {
+                    runQuiz();
+                }
+            }
+        }, 1000);
     } else {
-      clearInterval(intervalId); // Stop the interval after 5 rounds
-      clearInterval(timerId);
-      displayFinalPage();
+        displayFinalPage();
     }
   }
 
@@ -419,16 +421,28 @@ document.addEventListener("DOMContentLoaded", function () {
     options[3].innerHTML = `<button class="selection">4:   <span class="option-text"> ${
       currentQuiz[optionsList[3]].name
     }</span></button>`;
-
+    
     let optionButtons = document.getElementsByClassName("selection");
+
     for (let i = 0; i < optionButtons.length; i++) {
+      optionButtons[i].removeEventListener("click", chooseOption); // Remove existing listeners
       optionButtons[i].addEventListener("click", chooseOption);
     }
+
+    // for (let i = 0; i < optionButtons.length; i++) {
+    //   optionButtons[i].addEventListener("click", chooseOption);
+    // }
+
+    for (let i = 0; i < optionButtons.length; i++) {
+      console.log(optionButtons[i]);
+    }
+
 
     let hint = document.getElementById("hint-container");
     hint.innerText = currentQuiz[Answer].hint;
     hideHint();
 
+    console.log(PreviousCharacters)
   }
 
   /**
@@ -561,7 +575,7 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   function chooseOption(event) {
     let buttons = document.getElementsByClassName("selection");
-    for (i = 0; i < buttons.length; i++) {
+    for (let i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
     let liItem = event.target.parentElement.innerText.slice(3);
@@ -610,10 +624,14 @@ document.addEventListener("DOMContentLoaded", function () {
    * hides the final page and displays the quiz page
    * and then runs the quiz by calling synchroniseClock and run quiz
    */
+
   function playAgainFunction() {
+    clearTimers(); 
     roundsCompleted = 1;
-    totalPoints = 0;
-    secondsLeft = resetTime;
+    totalPoints = 0; 
+    secondsLeft = resetTime; 
+    PreviousCharacters = []; 
+    
     let FinalPage = document.getElementById("final-page");
     FinalPage.style.display = "none";
     let Quiz = document.getElementById("Quiz");
@@ -622,3 +640,4 @@ document.addEventListener("DOMContentLoaded", function () {
     synchroniseClock();
   }
 });
+
