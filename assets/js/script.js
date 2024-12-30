@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let playAgain = document.getElementById("playAgain");
   playAgain.addEventListener("click", playAgainFunction);
 
-  easyQuiz = [
+  let easyQuiz = [
     {
       name: "Aizen",
       img: "assets/images/EasyQuiz/Aizen.webp",
@@ -441,8 +441,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let hint = document.getElementById("hint-container");
     hint.innerText = currentQuiz[Answer].hint;
     hideHint();
-
-    console.log(PreviousCharacters)
   }
 
   /**
@@ -640,4 +638,3 @@ document.addEventListener("DOMContentLoaded", function () {
     synchroniseClock();
   }
 });
-
