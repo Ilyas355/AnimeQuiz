@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function synchroniseClock() {
     clearTimers(); // Clear any existing timers
     updateTimer();
-
+    
     if (roundsCompleted <= maxRounds) {
         intervalId = setInterval(() => {
             if (roundsCompleted < maxRounds) {
@@ -361,16 +361,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }, round);
 
         timerId = setInterval(() => {
-            if (secondsLeft > 0) {
+            if (secondsLeft > 1) {
                 secondsLeft--;
                 updateTimer();
             } else {
                 roundsCompleted++;
-                alert("Time's up!");
                 resetTimer();
-                if (roundsCompleted <= maxRounds) {
-                    runQuiz();
-                }
+                if (roundsCompleted > maxRounds) {
+                  displayFinalPage();               
+                }  
             }
         }, 1000);
     } else {
@@ -637,4 +636,5 @@ document.addEventListener("DOMContentLoaded", function () {
     runQuiz();
     synchroniseClock();
   }
+
 });
